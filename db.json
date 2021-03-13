@@ -1,0 +1,465 @@
+{
+  "processes": [
+    {
+      "id": 1,
+      "name": "HR",
+      "uniqueName": "747dd878-a00e-4fa6-8c7e-b0b3cd2efe12",
+      "description": "Human Resources process",
+      "createdOn": "14-01-2016",
+      "status": 1,
+      "isDraft": 0
+    },
+    {
+      "id": 2,
+      "name": "Order Sale",
+      "uniqueName": "e3091b2c-30ae-4314-a87b-adfc73e86555",
+      "description": "Order sale process",
+      "createdOn": "14-01-2016",
+      "status": 0,
+      "isDraft": 0
+    },
+    {
+      "id": 3,
+      "name": "Product Sale",
+      "uniqueName": "a45017b1-6614-42e8-b22e-baad90f73c22",
+      "description": "Product sale process",
+      "createdOn": "14-01-2016",
+      "status": 1,
+      "isDraft": 0
+    },
+    {
+      "id": 4,
+      "name": "Bank assurance",
+      "uniqueName": "c8fdc1af-1b75-436d-8851-852e2b09ed56",
+      "description": "Bank assurance process",
+      "createdOn": "14-01-2016",
+      "status": 0,
+      "isDraft": 0
+    },
+    {
+      "id": 5,
+      "name": "Information Technology",
+      "uniqueName": "8dc7eef8-22f3-4846-a1db-d6c2f3f4073e",
+      "description": "IT process recruting",
+      "createdOn": "14-01-2016",
+      "status": 1,
+      "isDraft": 0
+    },
+    {
+      "id": 6,
+      "name": "Operations",
+      "uniqueName": "7c20d570-b027-4c33-9832-c5d7f72b0fa2",
+      "description": "Operation process management",
+      "createdOn": "14-01-2016",
+      "status": 1,
+      "isDraft": 0
+    }
+  ],
+  "states": [
+    {
+      "id": 1,
+      "name": "Order created",
+      "uniqueName": "2aa18b71-b0a7-4e04-8ea4-32c66d3982a9",
+      "description": " No description",
+      "processId": 1,
+      "processUniqueName": "747dd878-a00e-4fa6-8c7e-b0b3cd2efe12",
+      "activitiesUniqueNames": [
+        "2e57dbab-1da9-418d-a6eb-08fe935f22dc"
+      ],
+      "stateTypeId": 1,
+      "positionX": 20,
+      "positionY": 100
+    },
+    {
+      "id": 2,
+      "name": "Order pending",
+      "uniqueName": "e6508959-9686-42a4-8192-58ede2d36d39",
+      "description": " No description",
+      "processId": 1,
+      "processUniqueName": "747dd878-a00e-4fa6-8c7e-b0b3cd2efe12",
+      "activitiesUniqueNames": [],
+      "stateTypeId": 2,
+      "positionX": 300,
+      "positionY": 100
+    }
+  ],
+  "stateTypes": [
+    {
+      "id": 1,
+      "name": "Start",
+      "description": "Should only be one per process.This state is the state into which a new Request is placed when it is created."
+    },
+    {
+      "id": 2,
+      "name": "Normal",
+      "description": "A regular state with no special designation."
+    },
+    {
+      "id": 3,
+      "name": "Complete",
+      "description": "A state signifying that any Request in this state have completed normally."
+    },
+    {
+      "id": 4,
+      "name": "Denied",
+      "description": "A state signifying that any Request in this state has been denied (e.g.never got started and will not be worked on)."
+    },
+    {
+      "id": 5,
+      "name": "Cancelled",
+      "description": "A state signifying that any Request in this state has been cancelled(e.g.work was started but never completed)."
+    }
+  ],
+  "actionTypes": [
+    {
+      "id": 1,
+      "name": "Approve",
+      "description": "The actioner is suggesting that the request should move to the next state."
+    },
+    {
+      "id": 2,
+      "name": "Deny",
+      "description": "The actioner is suggesting that the request should move to the previous state."
+    },
+    {
+      "id": 3,
+      "name": "Cancel",
+      "description": "The actioner is suggesting that the request should move to the Cancelled state in the process."
+    },
+    {
+      "id": 4,
+      "name": "Restart",
+      "description": "The actioner suggesting that the request be moved back to the Start state in the process."
+    },
+    {
+      "id": 5,
+      "name": "Resolve",
+      "description": "The actioner is suggesting that the request be moved all the way to the Completed state."
+    }
+  ],
+  "activityTypes": [
+    {
+      "id": 1,
+      "name": "Add Note",
+      "description": "Specifies that we should automatically add a note to a Request."
+    },
+    {
+      "id": 2,
+      "name": "Send Email",
+      "description": "Specifies that we should send an email to one or more recipients."
+    },
+    {
+      "id": 3,
+      "name": "Add Stakeholders",
+      "description": "Specifies that we should add one or more persons as Stakeholders on this request."
+    },
+    {
+      "id": 4,
+      "name": "Remove Stakeholders",
+      "description": "Specifies that we should remove one or more stakeholders from this request."
+    }
+  ],
+  "actors": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "triggers": [
+    {
+      "id": 1,
+      "name": "Auto",
+      "description": "Transition run automatically."
+    },
+    {
+      "id": 2,
+      "name": "Command",
+      "description": "Transition run by user action command."
+    },
+    {
+      "id": 3,
+      "name": "Timer",
+      "description": "Transition run at time reach."
+    },
+    {
+      "id": 4,
+      "name": "CommandAndTimer",
+      "description": "Transition run at time reach or Command actions."
+    }
+  ],
+  "timers": [
+    {
+      "id": 1,
+      "name": "TimerTest",
+      "description": "",
+      "timerTypeId": 2,
+      "value": ""
+    }
+  ],
+  "actions": [
+    {
+      "id": 1,
+      "name": "command created",
+      "uniqueName": "6524dd878-a00e-4f0d-8c7e-c0c0cd2efe12",
+      "description": "",
+      "processId": 1,
+      "processUniqueName": "747dd878-a00e-4fa6-8c7e-b0b3cd2efe12",
+      "actionTypeId": 1
+    },
+    {
+      "id": 2,
+      "name": "Reject command",
+      "uniqueName": "f35ee010-48e5-4e54-af33-5a3d5b0afe7d",
+      "description": "",
+      "processId": 1,
+      "processUniqueName": "747dd878-a00e-4fa6-8c7e-b0b3cd2efe12",
+      "actionTypeId": 2
+    }
+  ],
+  "activities": [
+    {
+      "id": 1,
+      "name": "Send note to buyer",
+      "uniqueName": "2e57dbab-1da9-418d-a6eb-08fe935f22dc",
+      "description": "",
+      "processId": 1,
+      "processUniqueName": "747dd878-a00e-4fa6-8c7e-b0b3cd2efe12",
+      "activityTypeId": 1
+    }
+  ],
+  "timerTypes": [
+    {
+      "id": 1,
+      "name": "Interval",
+      "description": ""
+    },
+    {
+      "id": 2,
+      "name": "Time",
+      "description": ""
+    },
+    {
+      "id": 3,
+      "name": "Date",
+      "description": ""
+    },
+    {
+      "id": 4,
+      "name": "DateAndTime",
+      "description": ""
+    }
+  ],
+  "transitions": [
+    {
+      "id": 1,
+      "processId": 1,
+      "processUniqueName": "747dd878-a00e-4fa6-8c7e-b0b3cd2efe12",
+      "name": "order create done",
+      "uniqueName": "0448c036-ca5f-48d5-a6a9-af347cc6cf44",
+      "description": "",
+      "currentStateId": 1,
+      "currentStateUniqueName": "2aa18b71-b0a7-4e04-8ea4-32c66d3982a9",
+      "nextStateId": 2,
+      "nextStateUniqueName": "e6508959-9686-42a4-8192-58ede2d36d39",
+      "triggerId": 2,
+      "hasTimer": false,
+      "timerId": null,
+      "actionsUniqueNames": [
+        "6524dd878-a00e-4f0d-8c7e-c0c0cd2efe12"
+      ],
+      "activitiesUniqueNames": [
+        "2e57dbab-1da9-418d-a6eb-08fe935f22dc"
+      ],
+      "direction": 1,
+      "positionX": 180,
+      "positionY": 110
+    }
+  ],
+  "transitionActions": [
+    {
+      "id": 1,
+      "transitionUniqueName": "0448c036-ca5f-48d5-a6a9-af347cc6cf44",
+      "actionUniqueName": "6524dd878-a00e-4f0d-8c7e-c0c0cd2efe12"
+    }
+  ],
+  "transitionActivities": [
+    {
+      "id": 1,
+      "transitionUniqueName": "0448c036-ca5f-48d5-a6a9-af347cc6cf44",
+      "activityUniqueName": "2e57dbab-1da9-418d-a6eb-08fe935f22dc"
+    }
+  ],
+  "stateActivities": [
+    {
+      "id": 1,
+      "stateUniqueName": "2aa18b71-b0a7-4e04-8ea4-32c66d3982a9",
+      "activityUniqueName": "2e57dbab-1da9-418d-a6eb-08fe935f22dc"
+    }
+  ],
+  "users":[
+    {
+      "id": 1,
+      "username": "cryxtol",
+      "password": "demo",
+      "email": "cryxtol@werun.world",
+      "accessToken": "access-token-8f3ae836da744329a6f93bf20594b5cc",
+      "refreshToken": "access-token-f8c137a2c98743f48b643e71161d90aa",
+      "roles": [1],
+      "pic": "/media/users/300_21.jpg",
+      "fullname": "Atsé Y. Ange Michael",
+      "firstname": "Y. Ange Michael",
+      "lastname": "Atsé",
+      "occupation": "CEO",
+      "companyName": "We run World",
+      "phone": "456669067890",
+      "language": "en",
+      "timeZone": "International Date Line West",
+      "website": "https://werun.world",
+      "emailSettings": {
+        "emailNotification": true,
+        "sendCopyToPersonalEmail": false,
+        "activityRelatesEmail": {
+          "youHaveNewNotifications": false,
+          "youAreSentADirectMessage": false,
+          "someoneAddsYouAsAsAConnection": true,
+          "uponNewOrder": false,
+          "newMembershipApproval": false,
+          "memberRegistration": true
+        },
+        "updatesFromKeenthemes": {
+          "newsAboutKeenthemesProductsAndFeatureUpdates": false,
+          "tipsOnGettingMoreOutOfKeen": false,
+          "thingsYouMissedSindeYouLastLoggedIntoKeen": true,
+          "newsAboutMetronicOnPartnerProductsAndOtherServices": true,
+          "tipsOnMetronicBusinessProducts": true
+        }
+      },
+      "communication": {
+        "email": true,
+        "sms": true,
+        "phone": false
+      },
+      "address": {
+        "addressLine": "8 Rue henri Sellier",
+        "city": "ST Jacques de la lande",
+        "state": "France",
+        "postCode": "35136"
+      },
+      "socialNetworks": {
+        "linkedIn": "https://linkedin.com/admin",
+        "facebook": "https://facebook.com/admin",
+        "twitter": "https://twitter.com/admin",
+        "instagram": "https://instagram.com/admin"
+      }
+    },
+    {
+      "id": 2,
+      "username": "user",
+      "password": "demo",
+      "email": "user@demo.com",
+      "accessToken": "access-token-6829bba69dd3421d8762-991e9e806dbf",
+      "refreshToken": "access-token-f8e4c61a318e4d618b6c199ef96b9e55",
+      "roles": [2], 
+      "pic": "/media/users/100_2.jpg",
+      "fullname": "Megan F",
+      "firstname": "Megan",
+      "lastname": "Fox",
+      "occupation": "Deputy Head of WeRunWorld in New York office",
+      "companyName": "WeRunWorld",
+      "phone": "456669067891",
+      "language": "en",
+      "timeZone": "International Date Line West",
+      "communication": {
+        "email": true,
+        "sms": true,
+        "phone": false
+      },
+      "emailSettings": {
+        "emailNotification": true,
+        "sendCopyToPersonalEmail": false,
+        "activityRelatesEmail": {
+          "youHaveNewNotifications": false,
+          "youAreSentADirectMessage": false,
+          "someoneAddsYouAsAsAConnection": true,
+          "uponNewOrder": false,
+          "newMembershipApproval": false,
+          "memberRegistration": true
+        },
+        "updatesFromKeenthemes": {
+          "newsAboutKeenthemesProductsAndFeatureUpdates": false,
+          "tipsOnGettingMoreOutOfKeen": false,
+          "thingsYouMissedSindeYouLastLoggedIntoKeen": true,
+          "newsAboutMetronicOnPartnerProductsAndOtherServices": true,
+          "tipsOnMetronicBusinessProducts": true
+        }
+      },
+      "address": {
+        "addressLine": "3487  Ingram Road",
+        "city": "Greensboro",
+        "state": "North Carolina",
+        "postCode": "27409"
+      },
+      "socialNetworks": {
+        "linkedIn": "https://linkedin.com/user",
+        "facebook": "https://facebook.com/user",
+        "twitter": "https://twitter.com/user",
+        "instagram": "https://instagram.com/user"
+      }
+    },
+    {
+      "id": 3,
+      "username": "guest",
+      "password": "demo",
+      "email": "guest@demo.com",
+      "accessToken": "access-token-d2dff7b82f784de584b60964abbe45b9",
+      "refreshToken": "access-token-c999ccfe74aa40d0aa1a64c5e620c1a5",
+      "roles": [3],
+      "pic": "/media/users/default.jpg",
+      "fullname": "Manu G",
+      "firstname": "Manu",
+      "lastname": "Ginobili",
+      "occupation": "CFO",
+      "companyName": "WeRunWorld",
+      "phone": "456669067892",
+      "language": "en",
+      "timeZone": "International Date Line West",
+      "communication": {
+        "email": true,
+        "sms": true,
+        "phone": false
+      },
+      "emailSettings": {
+        "emailNotification": true,
+        "sendCopyToPersonalEmail": false,
+        "activityRelatesEmail": {
+          "youHaveNewNotifications": false,
+          "youAreSentADirectMessage": false,
+          "someoneAddsYouAsAsAConnection": true,
+          "uponNewOrder": false,
+          "newMembershipApproval": false,
+          "memberRegistration": true
+        },
+        "updatesFromKeenthemes": {
+          "newsAboutKeenthemesProductsAndFeatureUpdates": false,
+          "tipsOnGettingMoreOutOfKeen": false,
+          "thingsYouMissedSindeYouLastLoggedIntoKeen": true,
+          "newsAboutMetronicOnPartnerProductsAndOtherServices": true,
+          "tipsOnMetronicBusinessProducts": true
+        }
+      },
+      "address": {
+        "addressLine": "1467  Griffin Street",
+        "city": "Phoenix",
+        "state": "Arizona",
+        "postCode": "85012"
+      },
+      "socialNetworks": {
+        "linkedIn": "https://linkedin.com/guest",
+        "facebook": "https://facebook.com/guest",
+        "twitter": "https://twitter.com/guest",
+        "instagram": "https://instagram.com/guest"
+      }
+    }
+  ]
+}
