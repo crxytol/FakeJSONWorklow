@@ -1,0 +1,9 @@
+name: mocki
+port: 3000
+endpoints:
+  - path: /api/workflow
+    method: get
+    responses:
+      - statusCode: 200
+        body:
+          message: Api Workflow!
