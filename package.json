@@ -1,0 +1,23 @@
+{
+  "name": "fakejsonworklow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crxytol/FakeJSONWorklow.git",
+    "json:server": "json-server --watch db.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crxytol/FakeJSONWorklow/issues"
+  },
+  "homepage": "https://github.com/crxytol/FakeJSONWorklow#readme",
+  "dependencies": {
+    "json-server": "^0.16.3"
+  }
+}
