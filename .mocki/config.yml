@@ -6,4 +6,4 @@ endpoints:
     responses:
       - statusCode: 200
         body:
-          message: Api Workflow!
+          message: Api Workflow
